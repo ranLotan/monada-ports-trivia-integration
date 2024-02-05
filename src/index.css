@@ -17,15 +17,17 @@ h1{
  
 button{
   border-radius: 5px;
+
+}
+.reset{
+  font-size: medium;
 }
 
-.container{
-  margin: 0 auto;
-  width: 90%;
-  height: 90%;
-  max-width: 18rem;
-  height: 18rem;
 
+
+.container{
+  /* width: 50%;
+  height: 50%; */
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(4, 1fr);
@@ -39,51 +41,16 @@ button{
   border-radius: 5px;
   justify-content: center;
   padding: 10px;
-  animation: 2s hideCard linear;
+}
 
+.timer{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  /* gap: 10px; */
 }
 
 .hide{
   visibility: hidden;
 }
 
-img{
-  width: 100%;
-  height: 100%;
-  border-radius: 5px;
-  /* transform: scale(0); */
-  opacity: 0;
-  animation: 2s hideImage linear;
-}
-
-
-
-.card.active{
-  transform: rotateY(0);
-}
-
-.card.active img{
-  opacity: 1;
-}
-
-.unmatch{
-    background-color: rgb(240, 28, 28);
-    border-radius: 5px;
-    animation: 2s hideCard linear;
-}
-
-@keyframes hideCard {
-  0%, 70%{
-    transform: rotateX(0deg);
-  }100%{
-    transform: rotateX(180deg);
-  }
-}
-
-@keyframes hideImage {
-  0%, 84%{
-    opacity: 1;
-  }85%{
-    opacity: 0;
-  }
-}
