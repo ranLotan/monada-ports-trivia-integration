@@ -1,14 +1,13 @@
-export default function Card({card, index, clickHandler}){
-    // const visible = card.hide === true ? 'hidden' : 'visible';
-    
+import Button from '@mui/material/Button';
+
+export default function Card({card, index, clickHandler}){    
     return (
         <div className={`card ${card.hide}`}> 
-            <button
+            <Button variant="contained"
                 style={{ backgroundColor: card.backgroundColor, minWidth: "150px" }}
-                onClick={() => clickHandler(index)}
-            >
+                onClick={() => clickHandler(index)}>
                 {card.name}
-            </button>
+            </Button>
         </div>
     )
 }       

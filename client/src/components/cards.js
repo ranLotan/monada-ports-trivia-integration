@@ -37,9 +37,9 @@ const objects = keysAndValuesArray.map((entrie, i) => {
     ];
 }).flat().sort(() => Math.random() - 0.5);
 
-const testGet = axios.get(baseUrl).then((response) => {
-    console.log(response.data);
-})
+// const testGet = axios.get(baseUrl).then((response) => {
+//     console.log(response.data);
+// })
 
 export default function Cards() {
     const [cards, setCards] = useState(objects);
@@ -138,8 +138,7 @@ export default function Cards() {
     // clickHandler.bind(cards);
         return (
             <div>
-
-                <div className="timer">
+                <div className="">
                     { 
                         startGame === true && <Timer timeLeft={timeRemaining} resetGame={startGameFunc}/>
                     }

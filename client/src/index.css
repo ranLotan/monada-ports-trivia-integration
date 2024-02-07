@@ -17,17 +17,16 @@ h1{
  
 button{
   border-radius: 5px;
+}
 
+Button{ 
+    text-transform: unset !important;
 }
 .reset{
   font-size: medium;
 }
 
-
-
 .container{
-  /* width: 50%;
-  height: 50%; */
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(4, 1fr);
@@ -37,17 +36,26 @@ button{
 
 .card{
   display: flex;
-  background-color: rgb(0, 140, 255);
   border-radius: 5px;
-  justify-content: center;
-  padding: 10px;
+  padding: 8px;
+}
+
+#score-borad{
+  padding-top: 40px;
 }
 
 .timer{
   display: flex;
-  flex-direction: row;
-  justify-content: center;
+  align-items: center;
+  padding-bottom: 30px;
   /* gap: 10px; */
+  .text{
+    flex: 3 0 auto;
+  }
+  Botton{
+    flex: 1 0 auto;
+    margin-left: 10px;
+  }
 }
 
 .hide{
