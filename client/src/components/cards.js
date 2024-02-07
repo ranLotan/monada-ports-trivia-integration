@@ -1,6 +1,7 @@
 "use client";
 import { useState, useRef } from "react";
 import { useEffect } from "react";
+import axios from "axios";
 import Card from './card';
 import CoverScreen from './coverScreen';
 import Timer from "./timer";
@@ -23,7 +24,7 @@ const data = new Map([
   ["Mexico", "Mexico City"],
   ["Israel", "jerusalem"]
 ]);
-
+const baseUrl = 'http://localhost:4000/game-data'
 const CARD_COLOR = 'grey';
 const CARD_CLICKED_COLOR = 'blue';
 const MATCH_ERROR_COLOR = 'red';
@@ -35,6 +36,10 @@ const objects = keysAndValuesArray.map((entrie, i) => {
         { matchId: i , name: entrie[1], backgroundColor: CARD_COLOR, hide: '' }
     ];
 }).flat().sort(() => Math.random() - 0.5);
+
+const testGet = axios.get(baseUrl).then((response) => {
+    console.log(response.data);
+})
 
 export default function Cards() {
     const [cards, setCards] = useState(objects);
